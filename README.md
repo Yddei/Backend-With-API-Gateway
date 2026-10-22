@@ -1,36 +1,27 @@
-# E-Bookshop: Architecture Refactor
+# ## Node.js Gateway + Spring Boot Backend
 
 ## How to Start
 - **Requirements:** Maven, Docker
 - **Steps:**
     - rename ```.env.example``` to ```.env```, set ```DB_USERNAME``` and ```DB_ROOT_PASSWORD``` values.
     - run ```docker-compose up --build -d``` in terminal, at root directory.
+    - test API via Postman
 
 ## Overview
-This project aims to convert a typical schoolwork using Jakarta EE Monolith into a modern Microservices architecture.
+This project is a pure backend project, with some frontend.
 
-<<<<<<< HEAD
-## Phases of this webserver
-- **Phase 1 (Legacy):** IM2073 Jakarta EE (Servlets/JDBC) running on Tomcat.
-- **Phase 2 (Refactor):** Node.js Gateway + Spring Boot 3.x Backend (In Progress).
-=======
-## Phases
-- **Legacy:** School Project IM2073 Jakarta EE (Servlets/JDBC) running on Tomcat.
-- **Refactored:** Node.js Gateway + Spring Boot 3.x Backend (In Progress).
+## Checklist (for me)
   - [x] Containerisation (Docker)
   - [x] Implement authentication system
   - [x] API Gateway
-  - [x] ~~Implement CORS and~~ configure SecurityConfig.java
+  - [x] Spring Security Configuration
   - [x] Service Decoupling
-    - [x] Auth
-    - [x] Shop
-    - [ ] ~~Cart~~
-    - [ ] ~~Checkout~~
+      - [x] auth
+      - [x] books
+      - [x] orders
 
-- 16 Aug 2026: Due to time constraints, some of the above parts will be skipped. Project will be marked as done as I achieved my goals with this project (mainly to set up Docker). No site/GUI for some parts, mostly done via Postman.
->>>>>>> c7d55f7 (Update README.md)
-
-## Changes
-- **Language:** Migrating from Pure Java to a Java + Node.js.
-- **Infrastructure:** Moving from manual server installs to Docker Containerization.
-
+## Some API examples
+- ```POST /api/auth/register```
+- ```POST /api/auth/login```
+- ```GET /api/books```
+- ```GET /api/orders```
