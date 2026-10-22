@@ -1,4 +1,4 @@
-# ## Node.js Gateway + Spring Boot Backend
+## Node.js Gateway + Spring Boot Backend
 
 ## How to Start
 - **Requirements:** Maven, Docker
